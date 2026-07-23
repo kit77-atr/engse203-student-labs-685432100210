@@ -1,0 +1,88 @@
+const form = document.querySelector('#profile-form');
+const status = document.querySelector('#form-status');
+const goalCount = document.querySelector('#goal-count');
+
+const preview = {
+  displayName: document.querySelector('#preview-name'),
+  learningRole: document.querySelector('#preview-role'),
+  learningGoal: document.querySelector('#preview-goal'),
+};
+
+function readForm() {
+ return Object.fromEntries(new FormData(form).entries());
+
+}
+
+function renderPreview(data) {
+  // TODO 6: อัปเดต preview ทั้ง 3 ค่าโดยใช้ textContent
+    preview.displayName.textContent = data.displayName.trim() || 'ยังไม่ระบุชื่อ';
+    preview.learningRole.textContent = data.learningRole || 'ยังไม่เลือกบทบาท';
+    preview.learningGoal.textContent = data.learningGoal.trim() || 'ยังไม่มีเป้าหมายการเรียนรู้';
+    goalCount.textContent = `${data.learningGoal.length} ตัวอักษร`;
+
+}
+
+function validate(data) {
+  const errors = {};
+
+  if (data.displayName.trim().length < 2) {
+    errors.displayName = 'กรุณากรอกชื่ออย่างน้อย 2 ตัวอักษร';
+  }
+  if (!data.learningRole) {
+    errors.learningRole = 'กรุณาเลือกบทบาทที่สนใจ';
+  }
+  if (data.learningGoal.trim().length < 10) {
+    errors.learningGoal = 'กรุณาเขียนเป้าหมายอย่างน้อย 10 ตัวอักษร';
+  }
+  return errors;
+}
+
+ 
+function renderErrors(errors) {
+  for (const name of ['displayName', 'learningRole', 'learningGoal']) {
+        const field = form.elements[name];
+        const output = document.querySelector(`#${name}-error`);
+        const message = errors[name] ?? '';
+
+        output.textContent = message;
+        field.setAttribute('aria-invalid', String(Boolean(message)));
+    }
+
+}
+
+form.addEventListener('input', () => {
+  // TODO 9: Read → Render
+    const data = readForm();
+    renderPreview(data);
+});
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const data = readForm();
+    const errors = validate(data);
+    renderErrors(errors);
+
+    if (Object.keys(errors).length > 0) {
+        renderStatus('invalid', 'ยังบันทึกไม่ได้ กรุณาตรวจสอบข้อมูล');
+        form.querySelector('[aria-invalid="true"]')?.focus();
+        return;
+    }
+
+    renderStatus('success', `พร้อมแล้ว ${data.displayName}! ข้อมูลผ่านการตรวจสอบ`);
+});
+
+function renderStatus(state, message) {
+  status.dataset.state = state;
+  status.textContent = message;
+}
+
+form.addEventListener('reset', () => {
+  queueMicrotask(() => {
+    // TODO 11: reset preview, errors และ status
+    renderErrors({});
+    renderPreview(readForm());
+    renderStatus('idle', 'พร้อมเริ่มกรอกข้อมูลใหม่');
+  });
+});
+renderPreview(readForm());
+renderStatus('idle', 'เริ่มพิมพ์เพื่อทดลอง Event และ Live Preview');

@@ -34,18 +34,18 @@
   {
     "week": "week-03",
     "title": "Responsive Web UI & Form Interaction",
-    "status": "draft",
-    "sourceOrigin": "course-starter",
-    "originalRepoUrl": "",
-    "originalCommit": "",
-    "pullRequestUrl": "",
-    "submissionTag": "",
-    "testStatus": "not-tested",
-    "notes": "Static site ต้องมี index.html ที่ publish root",
+    "status": "submitted",
+    "sourceOrigin": "migrated-repository",
+    "originalRepoUrl": "https://github.com/kit77-atr/engse203-lab03-68543210021-0",
+    "originalCommit": "bb1ac085a7ee3d1f3fab084a9ecf995c7565c611",
+    "pullRequestUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/pull/1",
+    "submissionTag": "lab-03-submission-v1",
+    "testStatus": "pass",
+    "notes": "Migrated LAB 03 source and publish output. Tested responsive UI, form interaction, and static page deployment.",
     "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-68543210021/labs/week-03/",
     "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/lab/week-03/labs/week-03/source",
-    "hasPublish": false,
-    "sourceEntries": 0
+    "hasPublish": true,
+    "sourceEntries": 6
   },
   {
     "week": "week-04",
