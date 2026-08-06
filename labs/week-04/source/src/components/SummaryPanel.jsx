@@ -1,17 +1,21 @@
-function SummaryPanel({ count }) {
+const summaryItems = [
+  ['total', 'ทั้งหมด'],
+  ['todo', 'ต้องทำ'],
+  ['doing', 'กำลังทำ'],
+  ['done', 'เสร็จแล้ว'],
+];
 
+function SummaryPanel({ summary }) {
   return (
-    <section className="panel">
-      <h2>
-        Starter พร้อมแล้ว
-      </h2>
-      <p>
-        มีข้อมูลเริ่มต้น {count} รายการ
-      </p>
-      <p>
-        เปิด README หลักแล้วทำ CP01–CP07 ตามลำดับ
-      </p>
+    <section className="summary-grid" aria-label="สรุปจำนวนงาน">
+      {summaryItems.map(([key, label]) => (
+        <article className="summary-card" key={key}>
+          <span>{label}</span>
+          <strong>{summary[key]}</strong>
+        </article>
+      ))}
     </section>
   );
 }
+
 export default SummaryPanel;
