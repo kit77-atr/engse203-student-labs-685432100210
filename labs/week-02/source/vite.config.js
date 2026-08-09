@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 const repositoryName = "engse203-lab02-68543210021-0";
 
 export default defineConfig({
-  base: `/${repositoryName}/`,
+  base: './',
   build: {
     outDir: "docs",
     emptyOutDir: true,
