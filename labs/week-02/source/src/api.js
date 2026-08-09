@@ -3,9 +3,8 @@ export async function fetchLearningTasks({ simulateError = false } = {}) {
     throw new Error("Simulated error: data source is unavailable");
   }
 
-  //const url = new URL("data/learning-tasks.json", import.meta.env.BASE_URL);
-  const url = `${import.meta.env.BASE_URL}data/learning-tasks.json`;
-  const response = await fetch(url);
+  // ใช้ relative path ชี้ตรงไปยังไฟล์ JSON ในโฟลเดอร์ public/data/
+  const response = await fetch("./data/learning-tasks.json");
 
   if (!response.ok) {
     throw new Error(`Unable to load tasks (HTTP ${response.status})`);
