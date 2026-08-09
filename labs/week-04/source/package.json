@@ -11,6 +11,7 @@
     "check:cp": "node scripts/check-checkpoint.mjs"
   },
   "dependencies": {
+    "engse203-student-labs-68543210021": "file:../../..",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
