@@ -9,8 +9,8 @@
 ## URLs
 
 - Repository: https://github.com/kit77-atr/engse203-student-labs-685432100210
-- Pull Request: https://github.com/kit77-atr/engse203-student-labs-68543210021-0/pull/4
-- GitHub Pages: https://kit77-atr.github.io/engse203-student-labs-68543210021-0/
+- Pull Request: https://github.com/kit77-atr/engse203-student-labs-685432100210/pull/5
+- GitHub Pages: https://kit77-atr.github.io/engse203-student-labs-685432100210/
 
 ## Component Tree
 

@@ -11,7 +11,7 @@
     "testStatus": "pass",
     "notes": "Ran hello.js and verified developer environment.",
     "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-68543210021/labs/week-01/",
-    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/lab/week-01/labs/week-01/source",
+    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/main/labs/week-01/source",
     "hasPublish": false,
     "sourceEntries": 4
   },
@@ -27,7 +27,7 @@
     "testStatus": "pass",
     "notes": "Migrated LAB 02 Vite project. Checked project and built Vite output successfully.",
     "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-68543210021/labs/week-02/",
-    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/lab/week-02/labs/week-02/source",
+    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/main/labs/week-02/source",
     "hasPublish": true,
     "sourceEntries": 10
   },
@@ -43,7 +43,7 @@
     "testStatus": "pass",
     "notes": "Migrated LAB 03 source and publish output. Tested responsive UI, form interaction, and static page deployment.",
     "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-68543210021/labs/week-03/",
-    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/lab/week-03/labs/week-03/source",
+    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/main/labs/week-03/source",
     "hasPublish": true,
     "sourceEntries": 5
   },
@@ -59,7 +59,7 @@
     "testStatus": "pass",
     "notes": "พัฒนา React App เรียบร้อย ผ่านการทดสอบ",
     "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-68543210021/labs/week-04/",
-    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/lab/week-04/labs/week-04/source",
+    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021/tree/main/labs/week-04/source",
     "hasPublish": true,
     "sourceEntries": 14
   }
