@@ -8,6 +8,8 @@
       content="ENGSE203 Learning Dashboard — LAB 02 Modern JavaScript"
     />
     <title>ENGSE203 Learning Dashboard</title>
+    <!-- 1. เพิ่มลิงก์เรียกไฟล์ CSS (ใช้ relative path) -->
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <main class="container">
@@ -46,6 +48,7 @@
       <section id="task-list" class="task-list" aria-label="Learning tasks"></section>
     </main>
 
-    <script type="module" src="/src/main.js"></script>
+    <!-- 2. แก้จาก /src/main.js เป็น ./src/main.js (ลบ / ด้านหน้าออก) -->
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
