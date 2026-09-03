@@ -18,8 +18,9 @@ function DashboardPage() {
   const [requests, setRequests] = useState([]);
   const [statusFilter, setStatusFilter] = useState('all');
   // TODO B2: เพิ่ม state สำหรับข้อความค้นหา ที่นี่
-  const [errorMessage, setErrorMessage] = useState('');
   const [notice, setNotice] = useState('');
+  const [searchText, setSearchText] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     let ignore = false;
@@ -101,6 +102,12 @@ function DashboardPage() {
         <>
           <SummaryPanel summary={summary} />
           <section className="panel" aria-labelledby="request-list-title">
+            <input
+                    type="text"
+                    placeholder="ค้นหาจากประเภทหรือสถานที่"
+                    value={searchText}
+                    onChange={(event) => setSearchText(event.target.value)}
+              />
             <div className="section-heading">
               <h2 id="request-list-title">รายการคำร้อง</h2>
               <FilterBar value={statusFilter} onFilterChange={setStatusFilter} />
