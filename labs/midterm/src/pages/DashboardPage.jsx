@@ -119,7 +119,11 @@ function DashboardPage() {
             </div>
             {/* TODO B2: วางช่อง <input> ค้นหา ตรงนี้ (เหนือรายการ) แล้วกรองร่วมกับตัวกรองสถานะ ค้นจากประเภท/สถานที่ */}
             {/* TODO B3: ส่ง onAcknowledge={handleAcknowledge} ให้ RequestList เพื่อให้การ์ด pending มีปุ่ม "รับเรื่อง" */}
-            <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
+            {filteredRequests.length === 0 ? (
+            <p>ไม่พบคำร้องที่ตรงกับการค้นหา</p>
+            ) : (
+              <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
+            )}
           </section>
         </>
       )}
