@@ -39,13 +39,15 @@
 
 | เวลา | งาน | Prompt ที่ถาม | AI ตอบว่าอะไร | ฉันทำอะไรต่อ |
 |---|---|---|---|---|
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| 13.35 | B1 | "ช่วยตรวจและอธิบาย Bug ใน DashboardPage ตามโจทย์ B1 ทั้ง 6 ข้อว่าต้องแก้ตรงไหนพร้อมอธิบายให้เข้าใจ" | แนะนำให้แก้ key ของ SummaryPanel, completed count, status filter, dependency ของ useEffect/useMemo และจัดการ Promise จาก deleteRequest | อ่านโค้ดและแก้ทีละ Bug ตามจุดที่อธิบาย ตรวจผลจากหน้าเว็บและ Console ว่าไม่มี warning/error และทดสอบ summary/filter/URL/delete |
+| 14.24 | B2 | "ช่วยทำช่องค้นหาตามโจทย์ B2.1 ต้องเพิ่มตรงไหนพร้อมอธิบายให้เข้าใจ" | แนะนำเพิ่ม searchText ด้วย useState และ `<input>` ที่มี placeholder ตามโจทย์ | เพิ่ม state และ input เอง แล้วเปิดหน้าเว็บตรวจว่าช่องค้นหาแสดงและพิมพ์ข้อความได้ |
+| 14.56 | B2 | "ช่วยเขียน filter ค้นหาจากประเภทหรือสถานที่แบบไม่สนตัวพิมพ์ใหญ่เล็ก" | แนะนำใช้ `.filter()` และ `trim().toLowerCase()` แล้วตรวจ `requestType` หรือ `location` ด้วย `.includes()` | นำแนวทางมาเขียนใน `filteredRequests` และทดสอบค้นหา "ซ่อม" ได้ REQ-101 และ REQ-104 ตรงโจทย์ |
+| 15.18 | B2 | "ช่วยรวม search กับ status filter ให้ทำงานพร้อมกันพร้อมอธิบายให้เข้าใจ" | แนะนำแยก `matchesSearch` และ `matchesStatus` แล้วคืนค่า `matchesSearch && matchesStatus` | แก้ `filteredRequests` และทดสอบเลือก completed พร้อมค้นหา "ซ่อม" เหลือ REQ-104 |
+| 15.41 | B2 | "ถ้าค้นหาแล้วไม่เจอ ต้องแสดงข้อความตามโจทย์ และ summary ต้องนับจากข้อมูลทั้งหมดใช่ไหม" | แนะนำให้ตรวจ `filteredRequests.length === 0` เพื่อแสดงข้อความ แต่ summary ต้องคำนวณจาก `requests` ทั้งหมด | เพิ่มข้อความ "ไม่พบคำร้องที่ตรงกับการค้นหา" และตรวจว่า Summary ยังเป็น 5/2/1/2 แม้รายการถูกกรอง |
+| 16.02 | B3 | "B3.1 ต้องทำปุ่มรับเรื่องสำหรับคำร้อง pending ตรงไหนพร้อมอธิบายให้เข้าใจ" | แนะนำให้ RequestCard แสดงปุ่มเมื่อ `request.status === 'pending'` และเรียก callback พร้อม `request.id` | เพิ่มปุ่ม "รับเรื่อง" ใน RequestCard และตรวจว่า REQ-102 กับ REQ-105 มีปุ่ม ส่วนรายการอื่นไม่มี |
+| 16.20 | B3 | "B3.2 กดรับเรื่องแล้วต้องเปลี่ยน status และ summary อัปเดตทันที ต้องเขียนยังไง" | แนะนำสร้าง `handleAcknowledge` ใน DashboardPage เรียก `updateRequestStatus(requestId, 'in-progress')` แล้ว `setRequests(nextRequests)` และส่ง `onAcknowledge` ให้ RequestList | เพิ่ม handler และส่ง callback ให้ RequestList แล้วทดสอบ REQ-102 จาก pending เป็น in-progress; Summary เปลี่ยน pending 2→1 และ in-progress 1→2 |
+| 16.35 | B3 | "B3.3 ต้องตรวจสอบ persistence หลังจาก B3.2 อย่างไร" | แนะนำให้เปลี่ยนสถานะคำร้องแล้วกด F5 และตรวจ Local Storage ที่ key `engse203-campus-requests-v1` | กดรับเรื่อง REQ-102 แล้วกด F5 ตรวจว่าสถานะยังเป็น `in-progress` และตรวจ Local Storage ว่ามีข้อมูลถูกบันทึกไว้ |
+
 |  |  |  |  |  |
 
 *(เพิ่มแถวได้ตามต้องการ — คัดลอกบรรทัด `| | | | | |` ไปวางเพิ่ม)*
