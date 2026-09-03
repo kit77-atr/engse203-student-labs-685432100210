@@ -51,14 +51,21 @@ function DashboardPage() {
     completed: requests.filter((request) => request.status === 'completed').length,
   }), [requests]);
 
-  const filteredRequests = statusFilter === 'all'
-    ? requests
-    : requests.filter((request) => request.status === statusFilter);
+  const filteredRequests = requests.filter((request) => {
+  const query = searchText.trim().toLowerCase();
 
-  function handleRetry() {
-    if (scenario) setSearchParams({});
-    else reload();
-  }
+  if (!query) return true;
+
+  return (
+    request.requestType.toLowerCase().includes(query) ||
+    request.location.toLowerCase().includes(query)
+  );
+});
+
+function handleRetry() {
+  if (scenario) setSearchParams({});
+  else reload();
+}
 
   async function handleDelete(requestId) {
     try {
