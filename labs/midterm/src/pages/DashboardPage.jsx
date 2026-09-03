@@ -65,6 +65,16 @@ function DashboardPage() {
   return matchesSearch && matchesStatus;
 });
 
+async function handleAcknowledge(requestId) {
+  try {
+    const nextRequests = await updateRequestStatus(requestId, 'in-progress');
+    setRequests(nextRequests);
+    setNotice(`รับเรื่อง ${requestId} แล้ว`);
+  } catch (error) {
+    setNotice(error instanceof Error ? error.message : 'รับเรื่องไม่สำเร็จ');
+  }
+}
+
   async function handleDelete(requestId) {
     try {
       const nextRequests = await deleteRequest(requestId);
@@ -107,22 +117,25 @@ function DashboardPage() {
         <>
           <SummaryPanel summary={summary} />
           <section className="panel" aria-labelledby="request-list-title">
+            <div className="section-heading">
+              <h2 id="request-list-title">รายการคำร้อง</h2>
+              <FilterBar value={statusFilter} onFilterChange={setStatusFilter} />
+            </div>
             <input
                     type="text"
                     placeholder="ค้นหาจากประเภทหรือสถานที่"
                     value={searchText}
                     onChange={(event) => setSearchText(event.target.value)}
               />
-            <div className="section-heading">
-              <h2 id="request-list-title">รายการคำร้อง</h2>
-              <FilterBar value={statusFilter} onFilterChange={setStatusFilter} />
-            </div>
-            {/* TODO B2: วางช่อง <input> ค้นหา ตรงนี้ (เหนือรายการ) แล้วกรองร่วมกับตัวกรองสถานะ ค้นจากประเภท/สถานที่ */}
             {/* TODO B3: ส่ง onAcknowledge={handleAcknowledge} ให้ RequestList เพื่อให้การ์ด pending มีปุ่ม "รับเรื่อง" */}
             {filteredRequests.length === 0 ? (
             <p>ไม่พบคำร้องที่ตรงกับการค้นหา</p>
             ) : (
-              <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
+             <RequestList
+                  requests={filteredRequests}
+                  onDeleteRequest={handleDelete}
+                  onAcknowledge={handleAcknowledge}
+                />
             )}
           </section>
         </>
