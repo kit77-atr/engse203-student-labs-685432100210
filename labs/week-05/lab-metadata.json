@@ -1,0 +1,12 @@
+{
+  "week": "week-05",
+  "title": "React Campus Service Request Local Storage",
+  "status": "submitted",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/kit77-atr/engse203-lab03-68543210021-0",
+  "originalCommit": "ffca2ba",
+  "pullRequestUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021-0/pull/5",
+  "submissionTag": "lab-05-submission-v1",
+  "testStatus": "pass",
+  "notes": "React/Vite build output ต้องอยู่ใน publish/ ก่อนสร้าง Pages Hub"
+}
