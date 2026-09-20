@@ -1,0 +1,16 @@
+{
+  "week": "week-06",
+  "title": "Express API Foundation",
+  "status": "submitted",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210",
+  "originalCommit": "b71df45",
+  "pullRequestUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/pull/6",
+  "submissionTag": "lab-06-submission-v1",
+  "testStatus": "pass",
+  "notes": "Express API สำหรับ Lab 06 และมี API test evidence",
+  "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-685432100210/labs/week-06/",
+  "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/tree/main/labs/week-06/source",
+  "hasPublish": false,
+  "sourceEntries": 9
+}
