@@ -1,0 +1,16 @@
+{
+  "week": "week-12",
+  "title": "การทดสอบและการแก้ไขข้อผิดพลาด",
+  "status": "submitted",
+  "sourceOrigin": "student-repository",
+  "originalRepoUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210",
+  "originalCommit": "",
+  "pullRequestUrl": "",
+  "submissionTag": "lab-12-submission-v1",
+  "testStatus": "pass",
+  "notes": "ปรับ metadata ให้ตรงกับ Repository ของผู้จัดทำ ตรวจสอบ commit, Pull Request และสถานะการส่งก่อนเผยแพร่",
+  "pageUrl": "",
+  "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/tree/main/labs/week-12/source",
+  "hasPublish": true,
+  "sourceEntries": 17
+}
