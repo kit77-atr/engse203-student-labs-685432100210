@@ -1,0 +1,15 @@
+{
+  "week": "week-12",
+  "title": "การทดสอบและการแก้ไขข้อผิดพลาด",
+  "status": "in-progress",
+  "studentId": "685432100210",
+  "studentName": "กิตติภพ สว่างเจริญทรัพย์",
+  "repositoryUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210",
+  "sourceOrigin": "self-adapted",
+  "originalRepoUrl": "https://github.com/Aonney/engse203-student-labs-68543210077-2",
+  "originalCommit": "81bb9d7",
+  "pullRequestUrl": "",
+  "submissionTag": "",
+  "testStatus": "pending",
+  "notes": "ศึกษาและปรับแก้โค้ด Week 12 ให้เข้ากับ Repository ของกิตติภพ สว่างเจริญทรัพย์ โดยจะตรวจสอบการทำงานและรันทดสอบก่อนส่งงาน"
+}

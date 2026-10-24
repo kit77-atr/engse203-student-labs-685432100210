@@ -29,7 +29,7 @@
     "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-685432100210/labs/week-02/",
     "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/tree/main/labs/week-02/source",
     "hasPublish": true,
-    "sourceEntries": 11
+    "sourceEntries": 10
   },
   {
     "week": "week-03",
@@ -61,6 +61,70 @@
     "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-685432100210/labs/week-04/",
     "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/tree/main/labs/week-04/source",
     "hasPublish": true,
-    "sourceEntries": 14
+    "sourceEntries": 12
+  },
+  {
+    "week": "week-05",
+    "title": "React Campus Service Request Local Storage",
+    "status": "submitted",
+    "sourceOrigin": "migrated-repository",
+    "originalRepoUrl": "https://github.com/kit77-atr/engse203-lab03-68543210021-0",
+    "originalCommit": "ffca2ba",
+    "pullRequestUrl": "https://github.com/kit77-atr/engse203-student-labs-68543210021-0/pull/5",
+    "submissionTag": "lab-05-submission-v1",
+    "testStatus": "pass",
+    "notes": "React/Vite build output ต้องอยู่ใน publish/ ก่อนสร้าง Pages Hub",
+    "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-685432100210/labs/week-05/",
+    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/tree/main/labs/week-05/source",
+    "hasPublish": true,
+    "sourceEntries": 10
+  },
+  {
+    "week": "week-06",
+    "title": "Express API Foundation",
+    "status": "submitted",
+    "sourceOrigin": "repository",
+    "originalRepoUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210",
+    "originalCommit": "b71df45",
+    "pullRequestUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/pull/10",
+    "submissionTag": "lab-06-submission-v1",
+    "testStatus": "pass",
+    "notes": "Express API สำหรับ Lab 06 และมี API test evidence",
+    "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-685432100210/labs/week-06/",
+    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/tree/main/labs/week-06/source",
+    "hasPublish": false,
+    "sourceEntries": 9
+  },
+  {
+    "week": "week-07",
+    "title": "RESTful API, Validation & Error Handling",
+    "status": "submitted",
+    "sourceOrigin": "migrated-repository",
+    "originalRepoUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210",
+    "originalCommit": "",
+    "pullRequestUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/pull/11",
+    "submissionTag": "lab-07-submission-v1",
+    "testStatus": "pass",
+    "notes": "เชื่อมต่อ React frontend กับ Express backend และมี API test evidence",
+    "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-685432100210/labs/week-07/",
+    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/tree/main/labs/week-07/source",
+    "hasPublish": true,
+    "sourceEntries": 5
+  },
+  {
+    "week": "week-10",
+    "title": "SQLite Database Integration",
+    "status": "submitted",
+    "sourceOrigin": "migrated-repository",
+    "originalRepoUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210",
+    "originalCommit": "fb1dcd2",
+    "pullRequestUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/pull/11",
+    "submissionTag": "lab-10-submission-v1",
+    "testStatus": "incomplete",
+    "notes": "ENGSE203 Week 10: SQLite database integration with Express API and frontend. Pull request #11 is open; API checks still need to be completed.",
+    "pageUrl": "https://kit77-atr.github.io/engse203-student-labs-685432100210/labs/week-10/",
+    "sourceUrl": "https://github.com/kit77-atr/engse203-student-labs-685432100210/tree/main/labs/week-10/source",
+    "hasPublish": true,
+    "sourceEntries": 5
   }
 ]
