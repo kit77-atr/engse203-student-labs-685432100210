@@ -1,0 +1,12 @@
+{
+  "week": "week-13",
+  "title": "พัฒนาอย่างปลอดภัยและพร้อมส่งมอบ",
+  "status": "submitted",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/Aonney/engse203-student-labs-68543210077-2",
+  "originalCommit": "58380c3",
+  "pullRequestUrl": "",
+  "submissionTag": "lab-13-submission-v1",
+  "testStatus": "pending",
+  "notes": "นำโครงงาน Week 13 จาก repository ต้นทางมาปรับปรุงใน repository ของตนเอง ต้องตรวจสอบโค้ด แก้ไขการอ้างอิงให้เป็นของตนเอง และรันทดสอบก่อนส่งงาน"
+}
